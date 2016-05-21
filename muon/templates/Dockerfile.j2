@@ -1,0 +1,21 @@
+FROM {{ image }}
+
+{%- if image.startswith('centos') %}
+RUN rpm -U https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+RUN yum makecache fast
+RUN yum update -q -y
+RUN yum install -q -y gcc sudo python-devel python-pip python-virtualenv libffi-devel openssl-devel gmp-devel
+{%- elif image.startswith('ubuntu') %}
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update -qq
+RUN apt-get dist-upgrade -qq -y
+RUN apt-get install -qq -y sudo python-dev python-pip python-virtualenv libffi-dev libgmp-dev libssl-dev
+{%- else %}
+***
+*** Unsupported image type {{ image }}
+***
+{%- endif %}
+
+RUN virtualenv /opt/ansible && /opt/ansible/bin/pip install -q ansible==1.9.6 testinfra
+RUN mkdir -p /muon/roles/{{ role }}/
+WORKDIR /muon
