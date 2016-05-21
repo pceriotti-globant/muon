@@ -1,0 +1,1 @@
+Docker wrapper to test Ansible roles. http://muon-tool.rtfd.io

@@ -1,7 +1,7 @@
 Usage
 =====
 
-`Muon <http://muon.readthedocs.io>`_ is a tool designed to help in the
+`Muon <http://muon-tool.rtfd.io>`_ is a tool designed to help in the
 development of `Ansible <https://www.ansible.com>`_ roles.
 
 It uses `Docker <https://www.docker.com>`_ containers instead of virtual
@@ -11,7 +11,7 @@ The verification part is handled by
 `Testinfra <http://testinfra.readthedocs.io/en/latest/>`_, a plugin for the
 `Pytest <http://pytest.org>`_ test engine.
 
-To start using `Muon <http://muon.readthedocs.io>`_ with your role you
+To start using `Muon <http://muon-tool.rtfd.io>`_ with your role you
 need to run :class:`muon setup <muon.commands.setup.Setup>` on the
 role's directory.
 
@@ -60,7 +60,7 @@ You can use :class:`muon run <muon.commands.run.Run>` to run custom
 commands on the image, by default it will run ``/bin/bash`` to give you access
 to the full environment. If you need to pass options to your command prefix it
 with ``-- (double dash)`` to indicate its not an option for
-`Muon <http://muon.readthedocs.io>`_. As before any changes you made on
+`Muon <http://muon-tool.rtfd.io>`_. As before any changes you made on
 the image will be saved.
 
 To destroy your image you should do
