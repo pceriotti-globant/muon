@@ -11,6 +11,41 @@ The verification part is handled by
 `Testinfra <http://testinfra.readthedocs.io/en/latest/>`_, a plugin for the
 `Pytest <http://pytest.org>`_ test engine.
 
+
+Installation
+------------
+
+For end users:
+
+.. code-block:: bash
+
+  pip install muon
+
+
+For collaborators:
+
+.. code-block:: bash
+
+  git clone git@github.com:pcastellazzi/muon.git
+  cd muon
+  # sudo may be needed here if you are not using virtual environments.
+  python setup.py develop
+  pip install -U -e .
+
+Please run ``tox`` before submitting a PR.
+
+
+Dependencies
+------------
+
+* `Ansible <https://www.ansible.com>`_
+* `Docker <https://www.docker.com>`_
+* `Testinfra <http://testinfra.readthedocs.io/en/latest/>`_
+
+
+Getting started
+---------------
+
 To start using `Muon <http://muon-tool.rtfd.io>`_ with your role you
 need to run :class:`muon setup <muon.commands.setup.Setup>` on the
 role's directory.
