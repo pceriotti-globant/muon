@@ -27,7 +27,7 @@ Create a new role:
 
   $ ansible-galaxy init shiny_new_role
   $ cd shiny_new_role
-  $ muon init
+  $ muon setup
 
 Iterate over your new functiontionality:
 
